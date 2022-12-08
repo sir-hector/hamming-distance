@@ -1,26 +1,35 @@
 def roman(number):
     result = ''
 
+    thousands = (number % 10000) // 1000
+
+    if thousands == 3:
+        result = result + "MMM"
+    elif thousands == 2:
+        result = result + "MM"
+    elif thousands == 1:
+        result = result + "M"
+
     hundreds = (number % 1000) // 100
 
     if hundreds == 9:
-        result = "CM"
+        result = result + "CM"
     elif hundreds == 8:
-        result = "DCCC"
+        result = result + "DCCC"
     elif hundreds == 7:
-        result = "DCC"
+        result = result + "DCC"
     elif hundreds == 6:
-        result = "DC"
+        result = result + "DC"
     elif hundreds == 5:
-        result = "D"
+        result = result + "D"
     elif hundreds == 4:
-        result = "CD"
+        result = result + "CD"
     elif hundreds == 3:
-        result = "CCC"
+        result = result + "CCC"
     elif hundreds == 2:
-        result = "CC"
+        result = result + "CC"
     elif hundreds == 1:
-        result = "C"
+        result = result + "C"
 
     decimal = (number % 100) // 10
 
@@ -65,3 +74,5 @@ def roman(number):
         return result + "VIII"
     if ones == 9:
         return result + "IX"
+
+    return result
