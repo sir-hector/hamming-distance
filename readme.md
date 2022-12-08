@@ -1,0 +1,1 @@
+[![Python application](https://github.com/sir-hector/hamming-distance/actions/workflows/python-app.yml/badge.svg)](https://github.com/sir-hector/hamming-distance/actions/workflows/python-app.yml)
