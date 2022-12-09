@@ -8,7 +8,7 @@ class hamming:
             return 0
 
         if len(first) == 1 and len(second) == 1:
-            if  first == second:
+            if first == second:
                 return 0
             else:
                 return 1
@@ -19,6 +19,3 @@ class hamming:
                 result = result + 1
 
         return result
-
-
-
