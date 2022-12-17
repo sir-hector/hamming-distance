@@ -24,7 +24,7 @@ def generateInRange(low, high):
     if low > high:
         raise ValueError("First number mest be lower than second")
 
-    if low < 1 or low > 12:
+    if low < 1 or low > 12 or high < 1 or high  > 12 :
         raise ValueError("params must be in range of 1-12")
 
     result = ''

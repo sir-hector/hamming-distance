@@ -51,3 +51,26 @@ class ChristmasTest(unittest.TestCase):
 
     def test_whole_song(self):
         assert_that(generateWholeSong()).contains("twelfth", "second", "third")
+
+    def test_wrong_range(self):
+        with self.assertRaisesWithMessage(ValueError):
+            generateInRange(5, 3)
+
+    def test_wrong_range_max_size(self):
+        with self.assertRaisesWithMessage(ValueError):
+            generateInRange(5, 55)
+
+    def test_wrong_range_max_size(self):
+        with self.assertRaisesWithMessage(ValueError):
+            generateInRange(333, 12)
+
+    def test_wrong_range_min_size(self):
+        with self.assertRaisesWithMessage(ValueError):
+            generateInRange(-5, 55)
+
+    def test_wrong_range_min_size2(self):
+        with self.assertRaisesWithMessage(ValueError):
+            generateInRange(13, 55)
+
+    def assertRaisesWithMessage(self, exception):
+        return self.assertRaisesRegex(exception, r".+")
